@@ -1,4 +1,5 @@
 const CriminalComponent = criminal => {
+  console.log("***This is the criminal rendering component***")
   return `
   <section class="criminal">
   <h5>${criminal.name}</h5>
