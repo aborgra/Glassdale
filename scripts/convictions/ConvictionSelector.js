@@ -1,22 +1,34 @@
 import { useConvictions } from "./ConvictionDataProvider.js";
 
+const eventHub = document.querySelector(".container");
+const convictionListContainer = document.querySelector(".filters__crime");
 
+const ConvictionSelect = () => {
+  const convictions = useConvictions();
 
+  eventHub.addEventListener("change", changeEvent => {
+    if (changeEvent.target.classList.contains("crimeDropdown")) {
+      const selectedCrime = changeEvent.target.value;
+      console.log(selectedCrime);
 
-const CrimeSelectorComponent = () => {
-  const convictionListContainer = document.querySelector(".filters__crime");
-  const crimes = useConvictions();
+      const message = new CustomEvent("crimeSelected", {
+        detail: {
+          crime: selectedCrime
+        }
+      });
 
+      eventHub.dispatchEvent(message);
+    }
+  });
   const render = convictionsCollection => {
-  convictionListContainer.innerHTML += `
-  <select class="dropdown" id="crimeSelect">
+    convictionListContainer.innerHTML += `
+  <select class="crimeDropdown" id="crimeSelect">
   <option value="0">Please select a crime...</option>
-${crimes.map(crime => 
-  `<option>${crime}</option>`
-  )
-}
-</select>`
-}
-render(crimes)
-}
-export default CrimeSelectorComponent;
+${convictionsCollection.map(
+  crime => `<option id="crimeSelect">${crime}</option>`
+)}
+</select>`;
+  };
+  render(convictions);
+};
+export default ConvictionSelect;
