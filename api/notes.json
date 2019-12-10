@@ -1,0 +1,22 @@
+{
+  "noteEntries": [
+    {
+      "id": 1,
+      "date": "2019-04-20",
+      "suspect": "Ronald McDonald",
+      "text": "I think he did it!"
+    },
+    {
+      "date": "2019-12-02",
+      "suspect": "Hazle",
+      "text": "She did it",
+      "id": 2
+    },
+    {
+      "date": "2019-12-03",
+      "suspect": "Elvis",
+      "text": "Not him",
+      "id": 3
+    }
+  ]
+}

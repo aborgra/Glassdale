@@ -7,7 +7,7 @@ const ConvictionSelect = () => {
   const convictions = useConvictions();
 
   eventHub.addEventListener("change", changeEvent => {
-    if (changeEvent.target.classList.contains("crimeDropdown")) {
+    if (changeEvent.target.id ==="crimeSelect") {
       const selectedCrime = changeEvent.target.value;
       console.log(selectedCrime);
 

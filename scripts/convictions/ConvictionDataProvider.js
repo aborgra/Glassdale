@@ -14,7 +14,7 @@ export const getConvictions = () => {
   // now add the parsed data to the js array
   .then(parsedCrimes => {
     console.table(parsedCrimes)
-    convictions = parsedCrimes.slice()})
+    convictions = parsedCrimes.slice().sort()})
     // catch any errors that may arise from the fetch
   .catch(err => console.log(err))
 }

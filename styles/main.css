@@ -1,6 +1,23 @@
+
+.page{
+  display: flex;
+  /* border: 1px solid black; */
+  flex-direction: column;
+}
 .criminalsContainer {
   display: flex;
   flex-wrap: wrap;
+  border: 1px solid black;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  /* padding: 30pt; */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+  width: 100%;
+  min-height: 600px;
+
 }
 
 .criminal {
@@ -13,6 +30,9 @@
   padding: 8pt;
   display: flex;
   flex-direction: column;
+  max-height: 250px
+  
+  /* justify-content: center; */
 }
 
 .criminal__name{
@@ -33,3 +53,42 @@
 .crimeDropdown {
   box-shadow: grey;
 }
+
+.noteFormContainer {
+  /* border: 1px solid black; */
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  border: 1px solid black;
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+  width: 100%
+
+}
+
+.container {
+  /* margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px; */
+  padding: 30pt;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.filters {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  
+}
+
+.form {
+  padding: 30pt;
+ 
+}
+
+
+
+
