@@ -6,8 +6,30 @@
 .criminal {
   flex-basis: 20%;
   border: 1px solid black;
+  border-radius: 3px;
   margin: 10pt;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: left;
+  padding: 8pt;
+  display: flex;
+  flex-direction: column;
+}
+
+.criminal__name{
+  background-color: rgb(10, 10, 37);
+  color: white;
+  height: 25pt;
   padding: 5pt;
+}
+
+.criminal__info {
+  flex-basis: 10%
+}
+
+.pageTitle {
+  text-align: center;
+}
+
+.crimeDropdown {
+  box-shadow: grey;
 }
