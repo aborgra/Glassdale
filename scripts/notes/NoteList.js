@@ -6,6 +6,7 @@ const eventHub = document.querySelector(".container");
 
 export const NoteListComponent = () => {
 let noteCollection = useNotes()
+
 eventHub.addEventListener("noteSaved", event => {
   saveNote(event.detail)
   render(noteCollection)
@@ -28,5 +29,5 @@ const render = (noteCollection) => {
   }).join(" ")}
   `
 }
-render(noteCollection)
+// render(noteCollection)
 }

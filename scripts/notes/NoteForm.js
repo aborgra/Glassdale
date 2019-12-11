@@ -26,7 +26,8 @@ const NoteFormComponent = () => {
         <fieldset class="form__button">
           <button id="saveNote" type="button">Save Note</button>
         </fieldset>
-        <fieldset id="showNotes" type="button">Show Notes</button>
+        <fieldset class="form__show">
+        <button id="showNotes" type="button">Show Notes</button>
         </fieldset>
       </form>
         `
@@ -51,9 +52,10 @@ eventHub.addEventListener("click", clickEvent => {
       }
     })
     
-    
     eventHub.dispatchEvent(newNote)
   }})
+
+
 eventHub.addEventListener("click", clickEvent  => {
   if(clickEvent.target.id==="showNotes") {
     const message = new CustomEvent("showNoteButtonClicked")
