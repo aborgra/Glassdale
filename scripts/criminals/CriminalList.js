@@ -30,7 +30,12 @@ const CriminalListComponent = () => {
 
   
   }
+
   )
+  eventHub.addEventListener("click", event => {
+    if(event.target.id==="witness--close"){
+    render(criminalCollection)}
+  })
 
 
 let render = criminalCollection =>{ 

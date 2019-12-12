@@ -23,6 +23,12 @@
       "suspect": "Johnny Cash",
       "text": "I think he was involved too",
       "id": 4
+    },
+    {
+      "date": "2019-12-11",
+      "suspect": "Micaela Gleason",
+      "text": "\nAlibi: defensivly drinking bagels\n\n-Sounds suspicious",
+      "id": 5
     }
   ]
 }

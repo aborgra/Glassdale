@@ -16,17 +16,22 @@ const CriminalComponent = criminal => {
   )}</div>
   </div>
 
-  <button type="button" class="interviewButton" id="interviewButton--${criminal.id}">Interview Associates</button>
+  <button type="button" class="interviewButton" id="interviewButton--${
+    criminal.id
+  }">Interview Associates</button>
   
   <dialog class="dialog--associate" id="details--${criminal.id}">
               ${criminal.known_associates
                 .map(
                   associate => `
               <div>Name: ${associate.name}</div>
-              <div>Alibi: ${associate.alibi}</div>`
+              <div>Alibi: ${associate.alibi}</div>
+              <hr>`
                 )
-                .join("")}
-
+                
+                .join("")
+              }
+                
               <button class="button--close">Close</button>
           </dialog>
   </section>

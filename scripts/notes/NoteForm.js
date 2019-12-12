@@ -30,6 +30,10 @@ const NoteFormComponent = () => {
         <button id="showNotes" type="button">Show Notes</button>
         </fieldset>
       </form>
+      <button class="showWitnesses" id="showWitnesses">Show Witnesses</button>
+      <button class="witness--close" id="witness--close">Show All Criminals</button>
+
+
         `
     }
 
