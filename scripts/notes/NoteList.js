@@ -3,7 +3,7 @@ import { useNotes, saveNote, getNotes } from "./NoteDataProvider.js";
 
 
 const eventHub = document.querySelector(".container");
-
+const contentElement = document.querySelector(".notesContainer")
 export const NoteListComponent = () => {
 let noteCollection = useNotes()
 
@@ -13,16 +13,18 @@ eventHub.addEventListener("noteSaved", event => {
 })
 
 eventHub.addEventListener("showNoteButtonClicked", event => {
+  if(contentElement.innerHTML === ""){
   getNotes().then(
     () => {
       const allTheNotes = useNotes()
       render(allTheNotes)
     }
-  )
+  )}
+  else{contentElement.innerHTML=""}
 })
 
 const render = (noteCollection) => {
-  const contentElement = document.querySelector(".notesContainer")
+  
   contentElement.innerHTML = `
   ${noteCollection.map(note => {
     return noteComponent(note)

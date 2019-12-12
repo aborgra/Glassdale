@@ -21,7 +21,7 @@ const NoteFormComponent = () => {
         <fieldset class="form__noteEntry">
           <label for="noteEntry">Note Entry<label>
             <br>
-              <textarea name=" noteEntry" id="noteEntry" cols="30" rows="10"></textarea>
+              <textarea name=" noteEntry" id="noteEntry" cols="70" rows="5"></textarea>
         </fieldset>
         <fieldset class="form__button">
           <button id="saveNote" type="button">Save Note</button>
@@ -30,8 +30,7 @@ const NoteFormComponent = () => {
         <button id="showNotes" type="button">Show Notes</button>
         </fieldset>
       </form>
-      <button class="showWitnesses" id="showWitnesses">Show Witnesses</button>
-      <button class="witness--close" id="witness--close">Show All Criminals</button>
+      
 
 
         `

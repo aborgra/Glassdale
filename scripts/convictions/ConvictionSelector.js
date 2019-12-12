@@ -27,7 +27,9 @@ const ConvictionSelect = () => {
 ${convictionsCollection.map(
   crime => `<option id="crimeSelect">${crime}</option>`
 )}
-</select>`;
+</select>
+<button class="showWitnesses" id="showWitnesses">Show Witnesses</button>
+      <button class="witness--close" id="witness--close">Show All Criminals</button>`;
   };
   render(convictions);
 };

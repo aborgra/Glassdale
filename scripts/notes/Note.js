@@ -5,8 +5,8 @@ const noteComponent = note => {
   <div>Date: ${note.date}</div>
   <div>Suspect: ${note.suspect}</div>
   <div>Note: ${note.text}</div>
-  </div>
   <hr>
+  </div>
   <br>
 
   `
