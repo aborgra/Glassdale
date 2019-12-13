@@ -16,12 +16,12 @@ const NoteFormComponent = () => {
         </fieldset>
         <fieldset class="form__Suspect">
           <label for="suspect">Suspect</label>
-          <input type="text" name="suspect" id="suspect">
+          <input type="text" name="suspect" id="suspect" placeholder="Suspect Name">
         </fieldset>
         <fieldset class="form__noteEntry">
           <label for="noteEntry">Note Entry<label>
             <br>
-              <textarea name=" noteEntry" id="noteEntry" cols="70" rows="5"></textarea>
+              <textarea name=" noteEntry" id="noteEntry" cols="70" rows="5" placeholder="Enter Note"></textarea>
         </fieldset>
         <fieldset class="form__button">
           <button id="saveNote" type="button">Save Note</button>

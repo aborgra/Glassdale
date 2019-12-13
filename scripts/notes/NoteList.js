@@ -10,9 +10,16 @@ let noteCollection = useNotes()
 
 
 eventHub.addEventListener("noteSaved", event => {
-  saveNote(event.detail)
-  render(noteCollection)
-})
+  saveNote(event.detail).then( () =>{
+   
+    contentElement.innerHTML=""
+  document.querySelector("#noteDate").value = ""
+  document.querySelector("#suspect").value = ""
+  document.querySelector("#noteEntry").value = ""
+
+    const allTheNotes = useNotes()
+    render(allTheNotes)})}
+)
 
 
 

@@ -6,6 +6,7 @@ const CriminalComponent = criminal => {
   <section class="criminal">
   <div class="criminal__name">${criminal.name}</div>
   <div class="criminal__info">
+  <img class="criminal image" src="./images/mugshot.jpg" height=40px width=30px>
   <div>Age: ${criminal.age}</div>
   <div>Conviction: ${criminal.conviction}</div>
   <div>Term Start: ${new Date(criminal.incarceration.start).toLocaleDateString(
