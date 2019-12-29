@@ -7,6 +7,7 @@ const noteComponent = note => {
   <div>Suspect: ${note.suspect}</div>
   <div>Note: ${note.text}</div>
   <button id="deleteNote--${note.id}">Delete</button>
+  <button id="editNote--${note.id}">Edit</button>
   <hr>
   </div>
   <br>

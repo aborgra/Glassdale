@@ -47,6 +47,21 @@ eventHub.addEventListener("click", clickEvent => {
   }
 })
 
+eventHub.addEventListener("click", clickEvent => {
+  if (clickEvent.target.id.startsWith("editNote--")) {
+      const [prefix, id] = clickEvent.target.id.split("--")
+      // find object by id then send to editNoteComponent
+
+  }
+})
+
+eventHub.addEventListener("click", clickEvent => {
+  if (clickEvent.target.id.startsWith("saveEditNote--")) {
+      const [prefix, id] = clickEvent.target.id.split("--")
+      editNote(id).then( () => render(useNotes()) )
+    }
+})
+
 const render = (noteCollection) => {
   
   contentElement.innerHTML = `
