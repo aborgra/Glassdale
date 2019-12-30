@@ -11,6 +11,8 @@ const noteComponent = note => {
   <hr>
   </div>
   <br>
+  <dialog class="dialog__editForm"></dialog>
+
 
   `
 }
