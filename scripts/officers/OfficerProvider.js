@@ -1,10 +1,10 @@
 let officers = [];
 
-const useOfficers = () => {
-  return officers;
+export const useOfficers = () => {
+  return officers.sort();
 };
 
-const getOfficers = () => {
+export const getOfficers = () => {
   return fetch("http://criminals.glassdale.us/officers")
     .then(response => response.json())
     .then(parsedOfficers => {
@@ -12,3 +12,5 @@ const getOfficers = () => {
       officers = parsedOfficers.slice();
     });
 };
+
+
