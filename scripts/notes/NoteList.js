@@ -52,7 +52,7 @@ export const NoteListComponent = () => {
       const [prefix, noteId] = clickEvent.target.id.split("--");
       // find object by id then send to editNoteComponent
       const allNotes = useNotes();
-      const theSelectedNote = allNotes.find(note => note.id == noteId);
+      const theSelectedNote = allNotes.find(note => note.id === parseInt(noteId, 10));
       const contentTarget = document.querySelector(".dialog__editForm");
 
       renderEdit(contentTarget, theSelectedNote);

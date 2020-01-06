@@ -12,13 +12,15 @@ const CriminalListComponent = () => {
 
   const criminalCollection = useCriminals();
 
-  eventHub.addEventListener("crimeSelected", event => {
-    const crime = event.detail.crime
-
+  eventHub.addEventListener("filterClicked", event => {
+    console.log("filter event heard")
+    const crime = event.detail.conviction
+    const officer = event.detail.arrestingOfficer
 
     const matchingCriminals = criminalCollection.filter(
       (currentCriminal) => {
-        if (currentCriminal.conviction===crime){
+
+        if (currentCriminal.conviction===crime && currentCriminal.arrestingOfficer === officer){
         return currentCriminal
       }
     }
@@ -26,7 +28,7 @@ const CriminalListComponent = () => {
     
     if(matchingCriminals.length > 0) {
       render(matchingCriminals)
-    } else {render(criminalCollection)}
+    } else {alert("No Criminals Match Search Criteria")}
 
   
   }

@@ -10,9 +10,9 @@ import { getWitnesses } from "./witnesses/WitnessDataProvider.js";
 import witnessShow from "./witnesses/WitnessShowList.js";
 import { getOfficers } from "./officers/OfficerProvider.js"
 import OfficerSelect from "./officers/OfficerSelector.js"
-import OfficerListComponent from "./officers/OfficerList.js";
+import { FilterListComponent } from "./filter/FilterList.js";
+// import OfficerListComponent from "./officers/OfficerList.js";
 // import noteComponent from "./notes/Note.js";
-
 NoteFormComponent()
 // renderWitnessButton()
 // witnessShow()
@@ -20,7 +20,8 @@ getNotes().then(NoteListComponent)
 getCriminals().then(CriminalListComponent);
 getConvictions().then(ConvictionSelect)
 getOfficers().then(() => {
-  OfficerSelect()
-  OfficerListComponent()})
+  OfficerSelect()})
+  // OfficerListComponent()
 
 getWitnesses().then(witnessShow)
+FilterListComponent()

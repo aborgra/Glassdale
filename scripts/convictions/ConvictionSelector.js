@@ -1,25 +1,25 @@
 import { useConvictions } from "./ConvictionDataProvider.js";
 
-const eventHub = document.querySelector(".container");
+// const eventHub = document.querySelector(".container");
 const convictionListContainer = document.querySelector(".filters__crime");
 
 const ConvictionSelect = () => {
   const convictions = useConvictions();
 
-  eventHub.addEventListener("change", changeEvent => {
-    if (changeEvent.target.id ==="crimeSelect") {
-      const selectedCrime = changeEvent.target.value;
-      console.log(selectedCrime);
+  // eventHub.addEventListener("change", changeEvent => {
+  //   if (changeEvent.target.id ==="crimeSelect") {
+  //     const selectedCrime = changeEvent.target.value;
+  //     console.log(selectedCrime);
 
-      const message = new CustomEvent("crimeSelected", {
-        detail: {
-          crime: selectedCrime
-        }
-      });
+  //     const message = new CustomEvent("crimeSelected", {
+  //       detail: {
+  //         crime: selectedCrime
+  //       }
+  //     });
 
-      eventHub.dispatchEvent(message);
-    }
-  });
+  //     eventHub.dispatchEvent(message);
+  //   }
+  // });
   const render = convictionsCollection => {
     convictionListContainer.innerHTML += `
   <select class="crimeDropdown" id="crimeSelect">

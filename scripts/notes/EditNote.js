@@ -5,13 +5,13 @@ const EditNoteComponent = note => {
   return `
   <input type="hidden" id="editNoteId" value="${note.id}">
   <input type="hidden" id="editNoteDate" value="${note.date}">
-  <input type="hidden" id="editNoteSuspect" value="${note.suspect}">
+  <label for="suspectEntry">Suspect:</label>
+  <input type="text" id="editNoteSuspect" value="${note.suspect}" readonly>
   <fieldset class="form__noteEntry">
     <label for="noteEntry">Edit Note:</label>
     <br>
     <textarea name="editNoteEntry" id="editNoteEntry" cols="70" rows="5">${note.text}</textarea>
   </fieldset>
-  <button id="clearNote--${note.id}">Clear</button>
   <button id="saveEditedNote--${note.id}">Save</button>
   `
 }
